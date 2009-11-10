@@ -1,0 +1,24 @@
+--- #YAML:1.0
+name:               RDF-Query-Client
+version:            0.01
+abstract:           Client for W3C SPARQL Protocol 1.0
+author:
+    - Toby Inkster <mail@tobyinkster.co.uk>
+license:            unknown
+distribution_type:  module
+configure_requires:
+    ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
+requires:
+    LWP::UserAgent:  5
+    RDF::Trine:      0.111
+    URI::Escape:     3
+no_index:
+    directory:
+        - t
+        - inc
+generated_by:       ExtUtils::MakeMaker version 6.54
+meta-spec:
+    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:  1.4
