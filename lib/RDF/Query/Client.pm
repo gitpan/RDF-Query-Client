@@ -9,7 +9,18 @@ use LWP::UserAgent;
 use RDF::Trine;
 use URI::Escape;
 
-our $VERSION = '0.05';
+our $VERSION = '0.100';
+our $LRDD;
+
+BEGIN
+{
+	eval 'use HTTP::LRDD;';
+	unless ($@)
+	{
+		no warnings;
+		$LRDD = HTTP::LRDD->new(qw'http://ontologi.es/sparql#endpoint http://ontologi.es/sparql#fingerpoint');
+	}
+}
 
 =head1 NAME
 
@@ -17,13 +28,13 @@ RDF::Query::Client - Get data from W3C SPARQL Protocol 1.0 servers
 
 =head1 VERSION
 
-0.05
+0.100
 
 =head1 SYNOPSIS
 
   use RDF::Query::Client;
   
-  my $query = new RDF::Query::Client ("SELECT * WHERE {?s ?p ?o. ?o ?p ?s.}");
+  my $query = new RDF::Query::Client ("SELECT * { ?s ?p ?o . }");
   my $iterator = $query->execute('http://example.com/sparql');
   while (my $row = $iterator->next) {
     print $row->{'s'}->as_string;
@@ -130,6 +141,38 @@ sub execute
 	{
 		return $iterator;
 	}
+}
+
+=item C<< $query->discover_execute( $resource_uri, \%opts ) >>
+
+Experimental feature. Discovers a SPARQL endpoint relevent to $resource_uri
+and then calls C<< $query->execute >> against that. Uses an LRDD-like
+method to discover the endpoint. If you're publishing data and want people
+to be able to find your SPARQL endpoint automatically, the easiest way is to
+include an Link header in HTTP responses:
+
+ Link: </my/endpoint>; rel="http://ontologi.es/sparql#endpoint"
+
+Change the URL in the angled brackets, but not the URL in the rel string.
+
+This feature requires the HTTP::LRDD package to be installed.
+
+=cut
+
+sub discover_execute
+{
+	my ($self, $resource_uri, $opts) = @_;
+
+	unless ($LRDD)
+	{
+		carp "Need HTTP::LRDD to use the discover_execute feature.\n"
+			and return undef;
+	}
+	
+	my $endpoint = $LRDD->discover($resource_uri)
+		or return undef;
+	
+	return $self->execute($endpoint, $opts);
 }
 
 =item C<< $query->get ( $endpoint, \%opts ) >>
