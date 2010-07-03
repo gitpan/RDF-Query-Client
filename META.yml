@@ -1,5 +1,5 @@
 ---
-abstract: 'Get data from W3C SPARQL Protocol 1.0 servers'
+abstract: 'get data from W3C SPARQL Protocol 1.0 servers'
 author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
@@ -32,4 +32,4 @@ resources:
   homepage: http://search.cpan.org/dist/RDF-Query-Client/
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/viewvc/perlmods/RDF-Query-Client/
-version: 0.100
+version: 0.101

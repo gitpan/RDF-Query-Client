@@ -1,8 +1,8 @@
 NAME
-    RDF::Query::Client - Get data from W3C SPARQL Protocol 1.0 servers
+    RDF::Query::Client - get data from W3C SPARQL Protocol 1.0 servers
 
 VERSION
-    0.100
+    0.101
 
 SYNOPSIS
       use RDF::Query::Client;
@@ -13,7 +13,8 @@ SYNOPSIS
         print $row->{'s'}->as_string;
       }
 
-METHODS
+DESCRIPTION
+  Constructor
     "$query = RDF::Query::Client->new ( $sparql, \%opts )"
         Returns a new RDF::Query::Client object for the specified $sparql.
         The object's interface is designed to be roughly compatible with
@@ -29,6 +30,7 @@ METHODS
         RDF::TrineShortcuts offers a way to perform RDQL queries on remote
         SPARQL stores though (by transforming RDQL to SPARQL).
 
+  Public Methods
     "$query->execute ( $endpoint, \%opts )"
         $endpoint is a URI object or string containing the endpoint URI to
         be queried.
@@ -85,7 +87,7 @@ METHODS
     "$query->error"
         Returns the last error the client experienced.
 
-SECURITY
+  Security
     The "execute" and "get" methods allow AuthUsername and AuthPassword
     options to be passed to them for HTTP Basic authentication. For more
     complicated authentication (Digest, OAuth, Windows, etc), it is also

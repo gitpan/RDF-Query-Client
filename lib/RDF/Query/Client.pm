@@ -9,26 +9,26 @@ use LWP::UserAgent;
 use RDF::Trine;
 use URI::Escape;
 
-our $VERSION = '0.100';
+our $VERSION = '0.101';
 our $LRDD;
 
 BEGIN
 {
+	no warnings;
 	eval 'use HTTP::LRDD;';
-	unless ($@)
+	if (!$@ && HTTP::LRDD->can('new'))
 	{
-		no warnings;
 		$LRDD = HTTP::LRDD->new(qw'http://ontologi.es/sparql#endpoint http://ontologi.es/sparql#fingerpoint');
 	}
 }
 
 =head1 NAME
 
-RDF::Query::Client - Get data from W3C SPARQL Protocol 1.0 servers
+RDF::Query::Client - get data from W3C SPARQL Protocol 1.0 servers
 
 =head1 VERSION
 
-0.100
+0.101
 
 =head1 SYNOPSIS
 
@@ -40,7 +40,9 @@ RDF::Query::Client - Get data from W3C SPARQL Protocol 1.0 servers
     print $row->{'s'}->as_string;
   }
 
-=head1 METHODS
+=head1 DESCRIPTION
+
+=head2 Constructor
 
 =over 4
 
@@ -62,6 +64,8 @@ Unlike RDF::Query, where you get a choice of query language, the query language
 for RDF::Query::Client is always 'sparql'. RDF::TrineShortcuts offers a way to perform
 RDQL queries on remote SPARQL stores though (by transforming RDQL to SPARQL).
 
+=back
+
 =cut
 
 sub new
@@ -79,6 +83,10 @@ sub new
 	
 	return $self;
 }
+
+=head2 Public Methods
+
+=over 4
 
 =item C<< $query->execute ( $endpoint, \%opts ) >>
 
@@ -409,7 +417,7 @@ sub _create_iterator
 
 =back
 
-=head1 SECURITY
+=head2 Security
 
 The C<execute> and C<get> methods allow AuthUsername and
 AuthPassword options to be passed to them for HTTP Basic authentication.
