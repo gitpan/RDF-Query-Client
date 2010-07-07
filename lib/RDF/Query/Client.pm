@@ -9,18 +9,8 @@ use LWP::UserAgent;
 use RDF::Trine;
 use URI::Escape;
 
-our $VERSION = '0.101';
+our $VERSION = '0.102';
 our $LRDD;
-
-BEGIN
-{
-	no warnings;
-	eval 'use HTTP::LRDD;';
-	if (!$@ && HTTP::LRDD->can('new'))
-	{
-		$LRDD = HTTP::LRDD->new(qw'http://ontologi.es/sparql#endpoint http://ontologi.es/sparql#fingerpoint');
-	}
-}
 
 =head1 NAME
 
@@ -28,7 +18,7 @@ RDF::Query::Client - get data from W3C SPARQL Protocol 1.0 servers
 
 =head1 VERSION
 
-0.101
+0.102
 
 =head1 SYNOPSIS
 
@@ -138,7 +128,7 @@ sub execute
 	push @{ $self->{'results'} }, { 'response' => $response };
 
 	my $iterator = $self->_create_iterator($response);
-	return undef unless defined $iterator;
+	return unless defined $iterator;
 	$self->{'results'}->[-1]->{'iterator'} = $iterator;
 		
 	if (wantarray)
@@ -173,12 +163,23 @@ sub discover_execute
 
 	unless ($LRDD)
 	{
+		no warnings;
+		eval 'use HTTP::LRDD;';
+		eval
+		{
+			$LRDD = HTTP::LRDD->new(qw'http://ontologi.es/sparql#endpoint http://ontologi.es/sparql#fingerpoint')
+				if HTTP::LRDD->can('new');
+		};
+	}
+	
+	unless (blessed($LRDD) && $LRDD->isa('HTTP::LRDD'))
+	{
 		carp "Need HTTP::LRDD to use the discover_execute feature.\n"
-			and return undef;
+			and return;
 	}
 	
 	my $endpoint = $LRDD->discover($resource_uri)
-		or return undef;
+		or return;
 	
 	return $self->execute($endpoint, $opts);
 }
@@ -214,7 +215,7 @@ sub get
 		}
 	}
 	
-	return undef;
+	return;
 }
 
 =item C<< $query->as_sparql >>
@@ -384,7 +385,7 @@ sub _create_iterator
 	if ($response->code != 200)
 	{
 		$self->{'error'} = $response->message;
-		return undef;
+		return;
 	}
 
 	if ($response->content_type =~ /sparql.results/i)
@@ -409,7 +410,7 @@ sub _create_iterator
 	else
 	{
 		$self->{error} = "Return type not understood.";
-		return undef
+		return;
 	}
 }
 

@@ -21,6 +21,7 @@ no_index:
     - t
 recommends:
   DBD::SQLite: 0
+  HTTP::LRDD: 0.101
 requires:
   Carp: 0
   LWP::UserAgent: 0
@@ -32,4 +33,4 @@ resources:
   homepage: http://search.cpan.org/dist/RDF-Query-Client/
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/viewvc/perlmods/RDF-Query-Client/
-version: 0.101
+version: 0.102
