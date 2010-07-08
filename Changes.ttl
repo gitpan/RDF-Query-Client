@@ -112,9 +112,21 @@ my:v_0-102
 	:revision       "0.102"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-Query-Client-0.102.tar.gz> ;
 	dcs:changeset [
-			dcs:versus my:v_0-102 ;
+			dcs:versus my:v_0-101 ;
 			dcs:item
 				[ rdfs:label "Construct HTTP::LRDD object just in time."@en ; a dcs:Bugfix ]
+		] .
+
+my:v_0-103
+
+	a               :Version ;
+	dc:issued       "2010-07-08"^^xsd:date ;
+	:revision       "0.103"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-Query-Client-0.103.tar.gz> ;
+	dcs:changeset [
+			dcs:versus my:v_0-102 ;
+			dcs:item
+				[ rdfs:label "use Scalar::Util qw'blessed'"@en ; a dcs:Bugfix ]
 		] .
 
 #############################################################
@@ -136,7 +148,7 @@ my:project
 	:created        "2009-11-10"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
 	:release        my:v_0-01 , my:v_0-02 , my:v_0-03 , my:v_0-04 , my:v_0-05 ,
-	                my:v_0-100 , my:v_0-101 , my:v_0-102 .
+	                my:v_0-100 , my:v_0-101 , my:v_0-102 , my:v_0-103 .
 
 #############################################################
 

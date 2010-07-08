@@ -20,6 +20,7 @@ recommends          'HTTP::LRDD'     => '0.101';
 requires            'RDF::Trine'     => '0.111';
 test_requires       'LWP::Simple'    => 0;
 requires            'LWP::UserAgent' => 0;
+requires            'Scalar::Util'   => 0;
 test_requires       'Test::More'     => '0.61';
 requires            'URI::Escape'    => 0;
 

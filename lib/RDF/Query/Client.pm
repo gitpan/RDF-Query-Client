@@ -7,9 +7,10 @@ use warnings;
 use Carp;
 use LWP::UserAgent;
 use RDF::Trine;
+use Scalar::Util qw'blessed';
 use URI::Escape;
 
-our $VERSION = '0.102';
+our $VERSION = '0.103';
 our $LRDD;
 
 =head1 NAME
@@ -18,7 +19,7 @@ RDF::Query::Client - get data from W3C SPARQL Protocol 1.0 servers
 
 =head1 VERSION
 
-0.102
+0.103
 
 =head1 SYNOPSIS
 

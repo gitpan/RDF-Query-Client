@@ -26,6 +26,7 @@ requires:
   Carp: 0
   LWP::UserAgent: 0
   RDF::Trine: 0.111
+  Scalar::Util: 0
   URI::Escape: 0
   perl: 5.6.0
 resources:
@@ -33,4 +34,4 @@ resources:
   homepage: http://search.cpan.org/dist/RDF-Query-Client/
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/viewvc/perlmods/RDF-Query-Client/
-version: 0.102
+version: 0.103
