@@ -14,11 +14,11 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 d6ceb245b470b3ec3f0f4c05f914ef437e47541a Changes
+SHA1 72772ca310533cb1e0ce1492642d8ad3447a45d5 Changes
 SHA1 f3296a09eb07898f3ba6dd0ece615dafc1b57e16 LICENSE
-SHA1 ac939b9b37ab884d4588c01be6361c3fc7946c56 MANIFEST
-SHA1 6c616f13d95f68ba34d38e751ae52ccf54f4cbf6 META.yml
-SHA1 7150e5e086ef493e1e527a1eeec44a8344b80db6 Makefile.PL
+SHA1 7112ef1a01c455e0673de19a2d02154fe16f7518 MANIFEST
+SHA1 d7b0160e976e82d130c8749102ff1be6c582a39c META.yml
+SHA1 80519f46cf4d005b59c73d680d3f90aef176d9bd Makefile.PL
 SHA1 a5ae9ca7a39b1099dc3d3d568a46821fccf3cf0b README
 SHA1 8c068d76c9b54c9013de4fc74ae327e981841392 examples/example1.pl
 SHA1 5d94bc10deff1dd74e4bc5dfa6fc015e39271f15 inc/Module/AutoInstall.pm
@@ -36,20 +36,19 @@ SHA1 b86d0385e10881db680d28bde94f275e49e34a27 inc/Module/Install/TrustMetaYml.pm
 SHA1 1326052d1df1065debee74f9d8583a734b9b3d00 inc/Module/Install/Win32.pm
 SHA1 bb607f3715c40fc3bc1c46496587cdb215bc4fa2 inc/Module/Install/WriteAll.pm
 SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 ef4c751e6da2367fbf9d0ef365c27d50d6ed3bf9 inc/Module/Package/Dist/RDF.pm
+SHA1 6b807287940754cc31a3db59f2b22e363d5525be inc/Module/Package/Dist/RDF.pm
 SHA1 775bd24f2fdbb6dce51a8b5b0cdb01fccfce83c4 inc/Scalar/Util.pm
 SHA1 b1b664983568bf822c327599eb88e223483ae96a inc/Scalar/Util/PP.pm
 SHA1 eef6bff62046bff2ce08ba132d0b58fba30f40b4 inc/YAML/Tiny.pm
-SHA1 b526160f58a03562738f361878a6e65e3d79796a inc/parent.pm
-SHA1 efdb4aea6606c32163dce782a31a7be50edc7502 lib/RDF/Query/Client.pm
-SHA1 6bcf849b3e74affad85726a73d925000b83daaf6 meta/changes.ttl
+SHA1 30817d07a88c0b3b02ffd53c7d1ead947b7fd0e9 lib/RDF/Query/Client.pm
+SHA1 7f62b7d950dadb5ac0b8eb7e9b7760608ed6a5b9 meta/changes.ttl
 SHA1 82afb16f959215de1518d71b5fd72990e9214cd1 meta/doap.ttl
 SHA1 02bf84afab4b5ea08047a9d604762a504a95604b meta/makefile.ttl
 SHA1 1f9cb9154062882bee24842cf273ea94ddbb9515 t/01basic.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk7RdnMACgkQzr+BKGoqfTkAGgCgrFFg1t6KFe+FWTeINz8w3K76
-NygAniMluujqNGzNmROn79di5C9wFsJT
-=XAYo
+iEYEARECAAYFAk7af34ACgkQzr+BKGoqfTmLngCfbKLA0ITlwM9XugIAZmeSHZK1
+ZNYAnRIXnieFyl/yD+qbW+WvXFEOu+Gn
+=1wNG
 -----END PGP SIGNATURE-----

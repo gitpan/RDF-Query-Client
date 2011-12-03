@@ -6,6 +6,10 @@ Home page:    <https://metacpan.org/release/RDF-Query-Client>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.107  2011-12-03
+
+ - (Bugfix Packaging) Update to newer Module::Package::RDF
+
 0.106  2011-11-26
 
  - General tidy-up.
@@ -61,8 +65,8 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
  - Add security notes to documentation
  - lib/RDF/Query/Client.pm: use 5.006
- - (Addition) Support for HTTP Basic Auth
  - (Addition) Implement get() method
+ - (Addition) Support for HTTP Basic Auth
 
 0.01  2009-11-10
 
