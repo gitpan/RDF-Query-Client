@@ -12,7 +12,7 @@ use URI::Escape 0 qw/uri_escape/;
 
 BEGIN {
 	$RDF::Query::Client::AUTHORITY = 'cpan:TOBYINK';
-	$RDF::Query::Client::VERSION   = '0.108';
+	$RDF::Query::Client::VERSION   = '0.109';
 }
 
 use namespace::clean;

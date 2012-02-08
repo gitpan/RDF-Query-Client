@@ -36,7 +36,6 @@ requires:
   LWP::UserAgent: 0
   RDF::Trine: 0.133
   Scalar::Util: 0
-  UNIVERSAL::AUTHORITY: 0
   URI::Escape: 0
   authority::shared: 0
   namespace::clean: 0.20
@@ -46,4 +45,4 @@ resources:
   homepage: https://metacpan.org/release/RDF-Query-Client
   license: http://dev.perl.org/licenses/
   repository: https://bitbucket.org/tobyink/p5-rdf-query-client
-version: 0.108
+version: 0.109
