@@ -6,17 +6,22 @@ Home page:    <https://metacpan.org/release/RDF-Query-Client>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.108  2012-02-08
+
+ - (Update) Stop using deprecated UNIVERSAL::AUTHORITY.
+   ++"Jonas Smedegaard"
+
 0.107  2011-12-03
 
  - (Bugfix Packaging) Update to newer Module::Package::RDF
 
 0.106  2011-11-26
 
+ - (Packaging) Module::Package::RDF
+ - (Update) use 5.010
  - General tidy-up.
  - Support 'Content-Type: application/sparql-(query|update)'.
  - Support HTTP 'PATCH' method.
- - (Update) use 5.010
- - (Packaging) Module::Package::RDF
 
 0.105  2011-03-04
 
@@ -47,9 +52,9 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
 0.05  2010-03-20
 
- - Minor documentation improvements.
  - (Update) Test script now checks HTTP connectivity to sparql.org before
    using it for tests.
+ - Minor documentation improvements.
 
 0.04  2010-01-27
 
@@ -63,10 +68,10 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
 0.02  2009-11-12
 
- - Add security notes to documentation
- - lib/RDF/Query/Client.pm: use 5.006
  - (Addition) Implement get() method
  - (Addition) Support for HTTP Basic Auth
+ - Add security notes to documentation
+ - lib/RDF/Query/Client.pm: use 5.006
 
 0.01  2009-11-10
 
