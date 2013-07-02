@@ -6,9 +6,15 @@ Home page:    <https://metacpan.org/release/RDF-Query-Client>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.111  2013-07-02
+
+ - (Bugfix Packaging) Stop bundling old version of Scalar::Util in 'inc'.
+   Fixes RT#86568
+
 0.110  2012-03-13
 
  - (Bugfix Packaging) sparql.org changed some URIs, breaking our tests.
+   Fixes RT#75676
 
 0.109  2012-02-08
 

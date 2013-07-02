@@ -12,7 +12,7 @@ use URI::Escape 0 qw/uri_escape/;
 
 BEGIN {
 	$RDF::Query::Client::AUTHORITY = 'cpan:TOBYINK';
-	$RDF::Query::Client::VERSION   = '0.110';
+	$RDF::Query::Client::VERSION   = '0.111';
 }
 
 use namespace::clean;
@@ -309,6 +309,21 @@ sub _create_iterator
 
 __END__
 
+=pod
+
+=encoding utf8
+
+=begin stopwords
+
+'sparql'
+application/sparql-query
+application/sparql-update
+application/x-www-form-urlencoded
+rel
+WebID
+
+=end stopwords
+
 =head1 NAME
 
 RDF::Query::Client - get data from W3C SPARQL Protocol 1.0 servers
@@ -391,7 +406,7 @@ iterator if called in list context.
 
 =item C<< discover_execute( $resource_uri, \%opts ) >>
 
-Experimental feature. Discovers a SPARQL endpoint relevent to $resource_uri
+Experimental feature. Discovers a SPARQL endpoint relevant to $resource_uri
 and then calls C<< $query->execute >> against that. Uses an LRDD-like
 method to discover the endpoint. If you're publishing data and want people
 to be able to find your SPARQL endpoint automatically, the easiest way is to
@@ -455,11 +470,11 @@ L<https://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>.
 
 =item * L<LWP::UserAgent>
 
-=item * http://www.w3.org/TR/rdf-sparql-protocol/
+=item * L<http://www.w3.org/TR/rdf-sparql-protocol/>
 
-=item * http://www.w3.org/TR/rdf-sparql-query/
+=item * L<http://www.w3.org/TR/rdf-sparql-query/>
 
-=item * http://www.perlrdf.org/
+=item * L<http://www.perlrdf.org/>
 
 =back
 
@@ -469,7 +484,7 @@ Toby Inkster, E<lt>tobyink@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009-2011 by Toby Inkster
+Copyright (C) 2009-2013 by Toby Inkster
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

@@ -60,7 +60,7 @@ DESCRIPTION
         iterator if called in list context.
 
     "discover_execute( $resource_uri, \%opts )"
-        Experimental feature. Discovers a SPARQL endpoint relevent to
+        Experimental feature. Discovers a SPARQL endpoint relevant to
         $resource_uri and then calls "$query->execute" against that. Uses an
         LRDD-like method to discover the endpoint. If you're publishing data
         and want people to be able to find your SPARQL endpoint
@@ -115,17 +115,17 @@ SEE ALSO
 
     *   LWP::UserAgent
 
-    *   http://www.w3.org/TR/rdf-sparql-protocol/
+    *   <http://www.w3.org/TR/rdf-sparql-protocol/>
 
-    *   http://www.w3.org/TR/rdf-sparql-query/
+    *   <http://www.w3.org/TR/rdf-sparql-query/>
 
-    *   http://www.perlrdf.org/
+    *   <http://www.perlrdf.org/>
 
 AUTHOR
     Toby Inkster, <tobyink@cpan.org>
 
 COPYRIGHT AND LICENSE
-    Copyright (C) 2009-2011 by Toby Inkster
+    Copyright (C) 2009-2013 by Toby Inkster
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.
