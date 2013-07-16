@@ -46,7 +46,7 @@ resources:
   homepage: https://metacpan.org/release/RDF-Query-Client
   license: http://dev.perl.org/licenses/
   repository: https://github.com/tobyink/p5-rdf-query-client
-version: 0.111
+version: 0.112
 x_contributors:
-  - 'Jonas Smedegaard'
   - TOBYINK
+  - 'Jonas Smedegaard'

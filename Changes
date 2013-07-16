@@ -6,6 +6,11 @@ Home page:    <https://metacpan.org/release/RDF-Query-Client>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.112  2013-07-16
+
+ - Prefer SPARQL results in XML over JSON. (This partially rolls back a
+   change from 0.104.)
+
 0.111  2013-07-02
 
  - (Bugfix Packaging) Stop bundling old version of Scalar::Util in 'inc'.

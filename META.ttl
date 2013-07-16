@@ -62,6 +62,7 @@ dist:project
 	doap:release      dist:v_0-109;
 	doap:release      dist:v_0-110;
 	doap:release      dist:v_0-111;
+	doap:release      dist:v_0-112;
 	doap:repository   [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-rdf-query-client>;
@@ -301,6 +302,19 @@ dist:v_0-111
 	];
 	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-Query-Client-0.111.tar.gz>;
 	doap:revision     "0.111"^^xsd:string.
+
+dist:v_0-112
+	a                 doap:Version;
+	dc:issued         "2013-07-16"^^xsd:date;
+	dcs:changeset     [
+		dcs:item [
+			a dcs:Change;
+			rdfs:label "Prefer SPARQL results in XML over JSON. (This partially rolls back a change from 0.104.)"@en;
+		];
+		dcs:versus dist:v_0-111;
+	];
+	doap:file-release <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/RDF-Query-Client-0.112.tar.gz>;
+	doap:revision     "0.112"^^xsd:string.
 
 <http://tobyinkster.co.uk/#i>
 	a                 foaf:Person;
