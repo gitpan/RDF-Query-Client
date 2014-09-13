@@ -6,6 +6,15 @@ Home page:    <https://metacpan.org/release/RDF-Query-Client>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=RDF-Query-Client>
 Maintainer:   Toby Inkster <tobyink@cpan.org>
 
+0.114	2014-09-13
+
+ [ Test Suite ]
+ - Use Test::RequiresInternet.
+
+ [ Other ]
+ - Drop dependency on Role::Commons.
+ - General tidy up.
+
 0.113	2014-09-10
 
  [ Packaging ]

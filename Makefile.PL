@@ -10,7 +10,7 @@ my $meta = {
                         "TOBYINK <tobyink\@cpan.org>",
                       ],
   "dynamic_config" => 0,
-  "generated_by"   => "Moose::Meta::Class::__ANON__::SERIAL::11 version , CPAN::Meta::Converter version 2.140640",
+  "generated_by"   => "Dist::Inkt::Profile::TOBYINK version 0.016, CPAN::Meta::Converter version 2.140640",
   "keywords"       => ["HTTP", "Protocol", "Query", "RDF", "REST", "SPARQL"],
   "license"        => ["perl_5"],
   "meta-spec"      => {
@@ -24,20 +24,19 @@ my $meta = {
                         runtime => {
                           recommends => { "HTTP::LRDD" => 0 },
                           requires   => {
-                                          "authority::shared" => 0,
-                                          "Carp"              => 0,
-                                          "HTTP::Request"     => 0,
-                                          "LWP::UserAgent"    => 0,
-                                          "namespace::clean"  => "0.20",
-                                          "RDF::Trine"        => 0.133,
-                                          "Scalar::Util"      => 0,
-                                          "URI::Escape"       => 0,
+                                          "HTTP::Request"    => 0,
+                                          "LWP::UserAgent"   => 0,
+                                          "namespace::clean" => "0.20",
+                                          "RDF::Trine"       => 0.133,
+                                          "URI::Escape"      => 0,
                                         },
                         },
-                        test => { requires => { "Test::More" => 0.61 } },
+                        test => {
+                          requires => { "Test::More" => 0.61, "Test::RequiresInternet" => 0 },
+                        },
                       },
   "provides"       => {
-                        "RDF::Query::Client" => { file => "lib/RDF/Query/Client.pm", version => 0.113 },
+                        "RDF::Query::Client" => { file => "lib/RDF/Query/Client.pm", version => 0.114 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -53,7 +52,7 @@ my $meta = {
                                         },
                         X_identifier => "http://purl.org/NET/cpan-uri/dist/RDF-Query-Client/project",
                       },
-  "version"        => 0.113,
+  "version"        => 0.114,
   "x_contributors" => ["Jonas Smedegaard", "TOBYINK"],
 };
 
